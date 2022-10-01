@@ -1,4 +1,5 @@
 body{
+    background-color: blanchedalmond;
     margin: 20px;
 }
 
@@ -7,6 +8,11 @@ label[for="student_lastName"],
 label[for="student_etudNum"]
 {
   margin-bottom: 20px;
+}
+
+.entete{
+    display: flex;
+    justify-content: space-around;
 }
 
 .btn{
@@ -18,5 +24,33 @@ label[for="student_etudNum"]
     border: solid 2px;
     margin-bottom:5px;
     max-width: 30%;
+    text-align: center;
+    display: flex;
+}
+.container{
+
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-student{
+    margin-left: auto;
+    margin: 0 0 0 5px;
+}
+
+.form-add{
+
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: white;
     text-align: center;
 }

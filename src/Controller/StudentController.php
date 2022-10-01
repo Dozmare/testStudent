@@ -50,7 +50,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/user/{id}", name="update")
+     * @Route("/student/{id}", name="update")
      */
 
     public function updateAction(?Student $student,Request $request, EntityManagerInterface $entityManager): Response
@@ -84,16 +84,13 @@ class StudentController extends AbstractController
      * @Route("/delete", name="delete")
      */
 
-    public function deleteAction(?Student $student,Request $request, EntityManagerInterface $entityManager): Response
+    public function deleteAction(Student $student,Request $request, EntityManagerInterface $entityManager): Response
     {
 
-        if(!$student->getId())
-        {
-            $entityManager->persist($student);
-        }
-            $entityManager->flush();
+        $entityManager->remove($student);
+        $entityManager->flush();
 
-            return $this->redirect($this->generateUrl('delete', ['id' => $student->getId()]));
+        return $this->redirect($this->generateUrl('delete', ['id' => $student->getId()]));
     }
 
 }

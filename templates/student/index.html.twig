@@ -1,11 +1,16 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="">
+<div class="container">
     {% for student in etudList %}
     <div class="student-list">
         First Name : {{student.firstName}} <br>
         Last Name : {{student.lastName}}<br>
         Num : {{student.numEtud}}<br>
+        department : {{student.department}}<br>
+
+        <div class="button-student">
+	        <a href="/user/{{student.id}}"><button class="btn btn-primary">Edit student</button></a>
+	    </div>
     </div>
     {% endfor %}
 </div>

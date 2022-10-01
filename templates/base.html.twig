@@ -10,6 +10,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <link href="css/style.css" rel="stylesheet"/>
 
+        <!-- Font Awesome icons (free version)-->
+		<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -19,6 +23,10 @@
         {% endblock %}
     </head>
     <body>
+        <div class="entete">
+            <a class="btn btn-primary" href="/">Home
+            <a class="btn btn-primary" href="/new">add student</a>
+        </div>
         {% block body %}{% endblock %}
     </body>
 </html>
