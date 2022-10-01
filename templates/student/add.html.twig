@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="form-add">
+    {{ form_start(form) }}
+            {{ form_label(form.firstName) }}
+            {{ form_widget(form.firstName) }}
+    <br>
+            {{ form_label(form.lastName) }}
+            {{ form_widget(form.lastName) }}
+    <br>
+            {{ form_label(form.numEtud) }}
+            {{ form_widget(form.numEtud) }}
+    <br>
+            
+            
+            <button class="btn btn-primary" type="submit">Enregistrer</button>
+        {{ form_end(form) }}
+</div>
+{% endblock %}

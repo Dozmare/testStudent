@@ -1,0 +1,22 @@
+body{
+    margin: 20px;
+}
+
+label[for="student_firstName"],
+label[for="student_lastName"],
+label[for="student_etudNum"]
+{
+  margin-bottom: 20px;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+.student-list{
+
+    border: solid 2px;
+    margin-bottom:5px;
+    max-width: 30%;
+    text-align: center;
+}
